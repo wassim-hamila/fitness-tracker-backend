@@ -26,7 +26,10 @@ app.use(cors({
   origin: [
     'http://localhost:3000',
     'http://localhost:5173',
-    'https://front-end-05.vercel.app'
+    'https://front-end-05.vercel.app',
+    'https://fitness-tracker-frontend-eta.vercel.app',
+    'https://fitness-tracker-frontend-wassim-hamilas-projects.vercel.app',
+    /^https:\/\/fitness-tracker-frontend-.*\.vercel\.app$/
   ],
   credentials: true
 }));
