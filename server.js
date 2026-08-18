@@ -21,6 +21,10 @@ verifyEmailConfig().catch(() => {});
 
 const app = express();
 
+// Nécessaire derrière le proxy de Back4App (Cloud Run) pour que express-rate-limit
+// identifie correctement les IP via X-Forwarded-For sans lever d'erreur.
+app.set('trust proxy', 1);
+
 // Middleware CORS - configuration unique
 app.use(cors({
   origin: [
